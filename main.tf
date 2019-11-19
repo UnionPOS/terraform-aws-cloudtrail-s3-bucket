@@ -1,5 +1,5 @@
 module "label" {
-  source     = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.14.1"
+  source     = "git::https://github.com/UnionPOS/terraform-null-label.git?ref=up"
   enabled    = var.enabled
   namespace  = var.namespace
   stage      = var.stage
@@ -57,7 +57,7 @@ data "aws_iam_policy_document" "default" {
 }
 
 module "s3_bucket" {
-  source                             = "git::https://github.com/cloudposse/terraform-aws-s3-log-storage.git?ref=tags/0.6.0"
+  source                             = "git::https://github.com/UnionPOS/terraform-aws-s3-log-storage.git?ref=up"
   enabled                            = var.enabled
   namespace                          = var.namespace
   stage                              = var.stage
